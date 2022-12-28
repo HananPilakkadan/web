@@ -1094,7 +1094,7 @@ footer .bottom small {
 
 @media all and (max-width: 980px) {
     #home {
-        background-position: right;
+        background-position: left;
     }
 
     .main {
@@ -1439,7 +1439,11 @@ footer .bottom small {
     }
 
     .main-text h1 span {
-        font-size: 30px;
+        font-size: 22px;
+    }
+
+    .main-text small {
+        font-size: 22px;
     }
 
     .update h1 {
