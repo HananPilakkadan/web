@@ -50,7 +50,7 @@ ul {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: calc(100vh - 100px);
     display: block;
     padding-top: 100px;
     margin-top: -100px;
@@ -572,7 +572,7 @@ header .logo h1 img a {
 }
 
 .profile-info {
-    text-align: center;
+    text-align: left;
     margin-left: 20px;
 
 }
@@ -1093,9 +1093,7 @@ footer .bottom small {
 }
 
 @media all and (max-width: 980px) {
-    #home {
-        background-position: left;
-    }
+
 
     .main {
         padding-top: 30px;
@@ -1228,7 +1226,7 @@ footer .bottom small {
 
 
     .about-info p {
-        line-height: 1.5em;
+        line-height: 1.7em;
     }
 
     .main-text h1 {
