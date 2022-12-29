@@ -206,7 +206,6 @@ header #navMenu.active>span:nth-child(3) {
     justify-content: space-between;
     align-items: center;
     z-index: 44;
-    margin-left: 30px;
 }
 
 .nav-menu .social li {
@@ -1269,7 +1268,7 @@ footer .bottom small {
     .overlay {
         display: block;
         width: 95%;
-
+        z-index: 40;
         height: 96vh;
         position: fixed;
         bottom: 10px;
