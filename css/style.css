@@ -298,6 +298,7 @@ header .logo h1 img a {
 .main-text {
     justify-content: center;
     display: flex;
+    flex-direction: column;
     text-align: center;
     letter-spacing: 1px;
 
@@ -306,8 +307,7 @@ header .logo h1 img a {
 .main-text h1 {
     font-size: 36px;
     color: #fff;
-    display: inline-block;
-    border-bottom: 1px solid #454545;
+    display: block;
     font-weight: 500;
     line-height: 1.8em;
 
