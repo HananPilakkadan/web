@@ -9,20 +9,31 @@ html {
 }
 
 @font-face {
-    font-family: 'RX100-Regular';
-    src: url('../fonts/RX100-Regular.woff2') format('woff2'),
-        url('../fonts/RX100-Regular.woff') format('woff'),
-        url('../fonts/RX100-Regular.ttf') format('truetype');
-    font-weight: 400;
-    font-display: swap;
+    font-family: 'ubuntu_monobold';
+    src: url('../fonts/ubuntumono-bold-webfont.woff2') format('woff2'),
+        url('../fonts/ubuntumono-bold-webfont.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'ubuntu_monoregular';
+    src: url('../fonts/ubuntumono-regular-webfont.woff2') format('woff2'),
+        url('../fonts/ubuntumono-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 
 
 body {
     background-color: #1b2022;
-    font-family: 'RX100-Regular';
+    font-family: 'ubuntu_monoregular';
 }
 
 a {
