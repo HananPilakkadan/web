@@ -315,12 +315,11 @@ header .logo h1 img a {
     display: flex;
     flex-direction: column;
     text-align: center;
-    letter-spacing: 1px;
 
 }
 
 .main-text h1 {
-    font-size: 36px;
+    font-size: 30px;
     color: #fff;
     display: block;
     font-weight: 500;
@@ -332,6 +331,11 @@ header .logo h1 img a {
     color: #f8fc03;
     font-size: 36px;
 
+}
+
+.main-text span {
+    color: #fff;
+    font-size: 16px;
 }
 
 .update {
@@ -680,13 +684,6 @@ header .logo h1 img a {
 
 .message .content span a {
     color: #515E67;
-}
-
-.main-text h1 span {
-    font-size: 36px;
-    color: #ffff;
-    display: block;
-    letter-spacing: 5px;
 }
 
 /*About*/
@@ -1605,20 +1602,15 @@ footer .bottom small {
 
 
 @media all and (max-width: 480px) {
+    .main-text h1{
+        font-size: 26px;
+    }
     .menu-active .menu {
         padding-bottom: 30px;
     }
 
-    .main-text h1 span {
-        font-size: 22px;
-    }
-
-    .main-text small {
-        font-size: 22px;
-    }
-
     .update {
-        padding: 40px 0;
+        padding: 50px 0 80px 0;
     }
 
 
@@ -1660,9 +1652,6 @@ footer .bottom small {
         font-size: 12px;
     }
 
-    .main-text h1 {
-        font-size: 22px;
-    }
 
     .about .top {
         width: 80%;
