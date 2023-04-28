@@ -10,6 +10,7 @@
     <meta property="og:image" content="./images/icon1.png">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/all.css">
+    <link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/aos.css">
 
     <link rel="icon" href="images/icon1.png">
@@ -17,6 +18,7 @@
     <script src="./js/jquery.min.js"></script>
     <script src="./js/lightgallery.min.js"></script>
     <script src="./js/aos.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/index.js" defer></script>
 
 </head>
@@ -37,18 +39,23 @@
                     <li><a href="./contact.html">Contact</a></li>
                 </ul>
                 <ul class="social">
-                    <li><a href="https://www.instagram.com/ha_n_an_/" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
+                    <li data-aos="zoom-out-right" data-aos-duration="500"><a href="https://www.instagram.com/ha_n_an_/"
+                            target="_blank"><i class="fab fa-instagram"></i></a>
                     </li>
-                    <li><a href="https://twitter.com/hananpilakkadan" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <li data-aos="zoom-out-right" data-aos-duration="500" data-aos-delay="100"><a
+                            href="https://twitter.com/hananpilakkadan" target="_blank"><i
+                                class="fab fa-twitter"></i></a>
                     </li>
-                    <li><a href="http://linkedin.com/in/hanan-p-371a5019b" target="_blank"><i
+                    <li data-aos="zoom-out-right" data-aos-duration="500" data-aos-delay="200"><a
+                            href="http://linkedin.com/in/hanan-p-371a5019b" target="_blank"><i
                                 class="fab fa-linkedin-in"></i></i></a>
                     </li>
-                    <li><a href="https://www.facebook.com/profile.php?id=100009757718808" target="_blank"><i
+                    <li data-aos="zoom-out-right" data-aos-duration="500" data-aos-delay="300"><a
+                            href="https://www.facebook.com/profile.php?id=100009757718808" target="_blank"><i
                                 class="fab fa-facebook-f"></i></a>
                     </li>
-                    <li><a href="https://www.github.com/hananpilakkadan/" target="_blank"><i
+                    <li data-aos="zoom-out-right" data-aos-duration="500" data-aos-delay="400"><a
+                            href="https://www.github.com/hananpilakkadan/" target="_blank"><i
                                 class="fab fa-github"></i></a>
                     </li>
                 </ul>
@@ -84,67 +91,118 @@
     <div class="update wow fadeInUp" data-wow-duration=".2s">
         <div class="wrapper">
             <h1>Portfolio</h1>
-            <ul>
-                <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
-                    <div class="img-box
-          "><img src="./images/ukxpress-screen.png" alt="Uk-xpress" /></div>
-                    <h6>UKXPRESS</h6>
-
-                    <span><a href="https://ukxpress.co.uk/" class="more" target="_blank">Explore <i
-                                class="fas fa-arrow-right"></i></a></span>
-                </li>
-                <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
-                    <div class="img-box
-          "><img src="images/kinfig-screen.png" alt="Kinfig" /></div>
-                    <h6>Kinfig</h6>
-                    <span><a href="https://kinfig.com/" class="more" target="_blank">Explore <i
-                                class="fas fa-arrow-right"></i></a></span>
-                </li>
-                <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
-                    <div class="img-box">
-                        <img src="images/daistot-screen.png" alt="Daistot" />
-                    </div>
-                    <h6>Daistot</h6>
-                    <span><a href="https://daistot.com/" class="more" target="_blank">Explore <i
-                                class="fas fa-arrow-right"></i></a></span>
-                </li>
-                <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
-                    <div class="img-box">
-                        <img src="images/health-serve.png" alt="Health-serve" />
-                    </div>
-                    <h6>Health Serve</h6>
-                    <span><a href="javascript:void(0)" class="more" target="_self">Explore <i
-                                class="fas fa-arrow-right"></i></a></span>
-                </li>
-                <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
-                    <div class="img-box">
-                        <img src="images/jne-web.png" alt="Jne-website" />
-                    </div>
-                    <h6>jne website</h6>
-                    <span><a href="https://jneartscollege.com/" class="more" target="_blank">Explore <i
-                                class="fas fa-arrow-right"></i></a></span>
-                </li>
-                <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
-                    <div class="img-box">
-                        <img src="images/kiasco.png" alt="Kiasco" />
-                    </div>
-                    <h6>Kiasco</h6>
-                    <span><a href="hhttps://kiasco.com/" class="more" target="_blank">Explore <i
-                                class="fas fa-arrow-right"></i></a></span>
-                </li>
-                <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
-                    <div class="img-box">
-                        <img src="images/jne-training.png" alt="Jne-training" />
-                    </div>
-                    <h6>jne training college</h6>
-                    <span><a href="https://jntcedavanna.com/" class="more" target="_blank">Explore <i
-                                class="fas fa-arrow-right"></i></a></span>
-                </li>
+            <ul class="swiper">
+                <div class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <div class="img-box"><img src="./images/ukxpress-screen.png" alt="Uk-xpress" /></div>
+                        <div class="text-box">
+                            <h6>UKXPRESS</h6>
+                            <span><a href="https://ukxpress.co.uk/" class="more" target="_blank">Explore</a>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="img-box"><img src="images/kinfig-screen.png" alt="Kinfig" /></div>
+                        <div class="text-box">
+                            <h6>Kinfig</h6>
+                            <span><a href="https://kinfig.com/" class="more" target="_blank">Explore</a></span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="img-box">
+                            <img src="images/daistot-screen.png" alt="Daistot" />
+                        </div>
+                        <div class="text-box">
+                            <h6>Daistot</h6>
+                            <span><a href="https://daistot.com/" class="more" target="_blank">Explore</a></span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="img-box">
+                            <img src="images/health-serve.png" alt="Health-serve" />
+                        </div>
+                        <div class="text-box">
+                            <h6>Health Serve</h6>
+                            <span><a href="javascript:void(0)" class="more" target="_self">Explore</a></span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="img-box">
+                            <img src="images/jne-web.png" alt="Jne-website" />
+                        </div>
+                        <div class="text-box">
+                            <h6>jne website</h6>
+                            <span><a href="https://jneartscollege.com/" class="more" target="_blank">Explore</a></span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="img-box">
+                            <img src="images/kiasco.png" alt="Kiasco" />
+                        </div>
+                        <div class="text-box">
+                            <h6>Kiasco</h6>
+                            <span><a href="hhttps://kiasco.com/" class="more" target="_blank">Explore</a></span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <div class="img-box">
+                            <img src="images/jne-training.png" alt="Jne-training" />
+                        </div>
+                        <div class="text-box">
+                            <h6>jne training college</h6>
+                            <span><a href="https://jntcedavanna.com/" class="more" target="_blank">Explore</a></span>
+                        </div>
+                    </li>
+                </div>
             </ul>
         </div>
     </div>
 
     <!-- #update-end -->
+
+    <!-- service-section -->
+
+    <section id="services">
+        <div class="wrapper">
+            <h1>Services</h1>
+            <ul>
+                <li>
+                    <div class="icon">
+                        <img src="./images/code-solid.svg" alt="Code">
+                    </div>
+                    <div class="text-box">
+                        <span>Web Development</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">
+                        <img src="./images/uikit.svg" alt="Code">
+                    </div>
+                    <div class="text-box">
+                        <span>UI / UX Designing</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">
+                        <img src="./images/paintbrush-solid.svg" alt="Code">
+                    </div>
+                    <div class="text-box">
+                        <span>Graphics Designing</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="icon">
+                        <img src="./images/camera-solid.svg" alt="Code">
+                    </div>
+                    <div class="text-box">
+                        <span>Photography</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- service-section-end -->
 
     <!-- #message-start -->
 

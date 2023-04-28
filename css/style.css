@@ -3,6 +3,11 @@ html {
     -webkit-overflow-scrolling: touch;
 }
 
+:root {
+    --dark: #1b2022;
+    --yellow: #f8fc03;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,7 +37,7 @@ html {
 
 
 body {
-    background-color: #1b2022;
+    background-color: var(--dark);
     font-family: 'ubuntu_monoregular';
 }
 
@@ -83,7 +88,7 @@ ul {
 
 header {
 
-    background-color: #1b2022;
+    background-color: var(--dark);
 }
 
 header .wrapper {
@@ -333,6 +338,12 @@ header .logo h1 img a {
     padding: 100px 0;
 }
 
+.update .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .update h1 {
     text-align: center;
     color: #fff;
@@ -345,20 +356,28 @@ header .logo h1 img a {
     align-items: center;
     justify-content: center;
     margin-top: 56px;
-    flex-wrap: wrap;
+    width: 70%;
+    margin: 0;
 }
 
 .update ul li {
-    width: 25%;
-    margin: 0 30px 30px 0;
-    padding: 30px;
+    cursor: pointer;
+    width: 350px;
     border: 1px solid transparent;
-    border-radius: 20px;
+    border-radius: 10px;
     transition: 0.3s ease-in;
-    background: #2D3539;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    position: relative;
+    overflow: hidden;
 
 
+}
+
+.swiper-slide {
+    filter: blur(1px);
+}
+
+.swiper-slide-active {
+    filter: blur(0);
 }
 
 .update ul li:hover {
@@ -373,6 +392,26 @@ header .logo h1 img a {
 
 }
 
+.update ul li .text-box {
+    position: absolute;
+    z-index: 44;
+    left: 0;
+    top: 100%;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    margin-left: -10px;
+    background: #070707b4;
+    transition: .4s ease-in-out;
+    /* transform: translate(-50%, -50%); */
+}
+
+.update ul li:hover .text-box {
+    top: 0;
+}
+
 .update ul li:nth-child(3n) {
     margin-right: 0;
 }
@@ -383,15 +422,15 @@ header .logo h1 img a {
 
 .update ul li .img-box {
     width: 100%;
+    display: block;
     overflow: hidden;
-    background-image: linear-gradient(to top, rgba(229, 24, 24, 0.609), rgba(255, 0, 0, 0), white max(9.5rem, 27vh));
-    mix-blend-mode: var(--card-blend-mode);
     border-radius: 10px;
 
 }
 
 .update ul li img {
     width: 100%;
+    object-fit: cover;
     display: block;
     border-radius: 10px;
     transition: .5s ease;
@@ -412,31 +451,118 @@ header .logo h1 img a {
     background: #242A2E;
     color: #f8f8f8;
     display: flex;
+    width: fit-content;
     align-items: center;
     letter-spacing: 0.5px;
     border-radius: 10px;
     transition: 0.3s ease-in;
-    width: 18%;
     border: 1px solid #f8fc03;
+    margin: 0 auto;
 }
 
-.update ul li a.more:hover {
-    width: 25%;
+#services {
+    padding: 80px 0;
 }
 
-.update ul li a.more:hover i {
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
+#services h1 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 26px;
 }
 
-.update ul li span i {
-    transform: translateX(-10px);
-    visibility: hidden;
-    opacity: 0;
-    transition: 0.3s ease-in;
-    margin-left: 10px;
+#services ul {
+    display: flex;
+    justify-content: center;
 }
+
+#services ul li {
+    text-align: center;
+    margin-right: 40px;
+    transition: .3s ease-in-out;
+}
+
+#services ul li:hover img {
+    -webkit-animation: slide-in-elliptic-top-bck 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-top-bck 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+#services ul li:hover {
+    transform: scale(1.03);
+}
+
+
+
+
+#services ul li:last-child {
+    margin-right: 0;
+}
+
+#services ul li .icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #bcbcbc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#services ul li span {
+    color: #f7f7f7;
+    display: block;
+    margin-top: 16px;
+}
+
+#services ul li:hover .icon {
+    background-color: var(--yellow);
+
+}
+
+#services ul li .icon img {
+    width: 100%;
+    display: block;
+    /* filter: invert(1); */
+}
+
+@-webkit-keyframes slide-in-elliptic-top-bck {
+    0% {
+        -webkit-transform: translateY(-600px) rotateX(30deg) scale(6.5);
+        transform: translateY(-600px) rotateX(30deg) scale(6.5);
+        -webkit-transform-origin: 50% 200%;
+        transform-origin: 50% 200%;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0) rotateX(0) scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-elliptic-top-bck {
+    0% {
+        -webkit-transform: translateY(-600px) rotateX(30deg) scale(6.5);
+        transform: translateY(-600px) rotateX(30deg) scale(6.5);
+        -webkit-transform-origin: 50% 200%;
+        transform-origin: 50% 200%;
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0) rotateX(0) scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+
+
 
 .message h1 {
     color: #fff;
@@ -779,10 +905,6 @@ h4 {
     letter-spacing: 2px;
 }
 
-.image-box {
-    padding: 0 400px;
-    margin: 100px 0;
-}
 
 .gallery-box {
     display: flex;
@@ -791,17 +913,37 @@ h4 {
     margin: 0 auto;
 }
 
-.images ul {
+.images-container ul {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
     justify-content: center;
     align-items: center;
-    padding-left: 0;
+    margin-top: 40px;
 }
 
-.images ul li img {
-    border-radius: 10px;
+.images-container ul li {
+    cursor: pointer;
+    width: 300px;
+    height: 200px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.images-container ul li:hover img {
+    transform: scale(1.03);
+}
+
+.images-container ul li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 2px;
+    transition: .3s ease;
 }
 
 .img1 {
@@ -1093,10 +1235,6 @@ footer .bottom small {
         font-size: 14px;
     }
 
-    .image-box {
-        padding: 0 200px;
-    }
-
     .info .call a {
         width: 200px;
     }
@@ -1113,18 +1251,6 @@ footer .bottom small {
         font-size: 20px;
     }
 
-    .image-box {
-        padding: 0 100px;
-    }
-
-    img.img {
-        width: 130px;
-    }
-
-    .img1 {
-        width: 130px;
-        height: 173.33px;
-    }
 
 
     .content-box .avatar {
@@ -1151,6 +1277,10 @@ footer .bottom small {
     .main-text {
         margin-top: 100px;
     }
+
+    .images-container ul {
+        width: 100%;
+    }
 }
 
 @media all and (max-width: 768px) {
@@ -1167,9 +1297,21 @@ footer .bottom small {
         display: block;
     }
 
+    .update .wrapper {
+        flex-direction: column;
+    }
+
+    .update h1 {
+        margin-bottom: 30px;
+    }
+
     .update ul li {
-        width: 80%;
+        width: 45%;
         margin-right: 0;
+    }
+
+    .update ul {
+        width: 100%;
     }
 
     .update ul li a.more {
@@ -1201,17 +1343,9 @@ footer .bottom small {
         margin-bottom: -20px;
     }
 
-    .image-box {
-        padding: 0 80px;
-    }
-
-    img.img {
-        width: 120px;
-    }
-
-    .img1 {
-        width: 130px;
-        height: 200px;
+    .images-container ul li {
+        width: 230px;
+        height: 160px;
     }
 
     .contact-container ul li a p {
@@ -1352,6 +1486,12 @@ footer .bottom small {
     .header .nav-menu ul.menu li a {
         color: #cccccc;
     }
+
+    .images-container ul li:nth-child(2n) {
+        margin-right: 0;
+    }
+
+
 }
 
 @media all and (max-width: 640px) {
@@ -1368,22 +1508,23 @@ footer .bottom small {
         margin: 20px 0;
     }
 
+    #services ul {
+        flex-wrap: wrap;
+    }
+
+    #services ul li {
+        width: 200px;
+        margin-bottom: 50px;
+    }
+
+    #services ul li:nth-child(2n) {
+        margin-right: 0;
+    }
+
     h1 {
         font-size: 30px;
     }
 
-    .image-box {
-        padding: 0 60px;
-    }
-
-    img.img {
-        width: 90px;
-    }
-
-    .img1 {
-        width: 100px;
-        height: 200px;
-    }
 
     .contact-us h1 {
         font-size: 24px;
@@ -1438,6 +1579,28 @@ footer .bottom small {
     .contact-container ul li {
         margin: 20px 0 0 0;
     }
+
+    .update h1,
+    .message h1 {
+        font-size: 22px;
+    }
+
+    .update ul li {
+        width: 80%;
+    }
+
+    .update ul li h6 {
+        font-size: 14px;
+    }
+
+    .update ul li a.more {
+        padding: 10px 12px;
+    }
+
+    .images-container ul li {
+        width: 210px;
+        height: 140px;
+    }
 }
 
 
@@ -1454,18 +1617,14 @@ footer .bottom small {
         font-size: 22px;
     }
 
-    .update h1 {
-        font-size: 26px;
+    .update {
+        padding: 40px 0;
     }
+
 
     .update ul {
         flex-direction: column;
         margin-bottom: 0;
-    }
-
-    .update ul li {
-        width: 80%;
-        margin-bottom: 50px;
     }
 
     .update ul li :last-child {
@@ -1474,6 +1633,23 @@ footer .bottom small {
 
     .update ul li h6 {
         margin: 20px 0;
+    }
+
+    #services {
+        padding-top: 0;
+    }
+
+    #services h1 {
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+
+    #services ul li span {
+        font-size: 16px;
+    }
+
+    #services ul li {
+        width: 150px;
     }
 
     .message h1.icon a {
@@ -1554,19 +1730,6 @@ footer .bottom small {
         margin: 0 auto;
     }
 
-    .image-box {
-        padding: 0 50px;
-        margin-top: 24px;
-    }
-
-    img.img {
-        width: 80px;
-    }
-
-    .img1 {
-        width: 90px;
-        height: 200px;
-    }
 
     .contact-container ul li a {
         display: block;
@@ -1599,6 +1762,11 @@ footer .bottom small {
 
     .contact-container ul li a p {
         font-size: 14px;
+    }
+
+    .images-container ul li {
+        width: 170px;
+        height: 120px;
     }
 }
 

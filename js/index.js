@@ -52,4 +52,26 @@ window.addEventListener("load", function () {
   loader.style.display = "none";
 });
 
+var swiper = new Swiper(".swiper", {
+  effect: "coverflow",
+  grabCursor: false,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 6,
+    stretch: 0,
+    depth: 80,
+    modifier: 2,
+    slideShadows: true,
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+  },
+});
+
 AOS.init();
