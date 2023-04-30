@@ -26,7 +26,7 @@ $(document).ready(function () {
 });
 window.onload = function () {
   //hide the preloader
-  document.querySelector("#loader").style.display = "none";
+//   document.querySelector("#loader").style.display = "none";
 };
 
 var swiper = new Swiper(".swiper", {

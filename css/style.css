@@ -1175,6 +1175,8 @@ footer .bottom small {
 .lds-grid {
     display: block;
     position: relative;
+    width: 40px;
+    height: 40px;
 }
 
 .lds-grid div {
