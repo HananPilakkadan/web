@@ -23,34 +23,11 @@ $(document).ready(function () {
   $(".main,.gallery").click(function () {
     $(".nav-menu .menu").removeClass("active");
   });
-
-  $(".owl-carousel").owlCarousel({
-    margin: 10,
-    items: 4,
-    autoplay: true,
-    autoplayTimeout: 2000,
-    loop: true,
-    fluidSpeed: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      481: {
-        items: 2,
-      },
-      641: {
-        items: 3,
-      },
-      1000: {
-        items: 5,
-      },
-    },
-  });
 });
-var loader = document.getElementById("loader");
-window.addEventListener("load", function () {
-  loader.style.display = "none";
-});
+window.onload = function () {
+  //hide the preloader
+  document.querySelector("#loader").style.display = "none";
+};
 
 var swiper = new Swiper(".swiper", {
   effect: "coverflow",
@@ -58,7 +35,7 @@ var swiper = new Swiper(".swiper", {
   centeredSlides: true,
   slidesPerView: "auto",
   coverflowEffect: {
-    rotate: 6,
+    rotate: 10,
     stretch: 0,
     depth: 80,
     modifier: 2,

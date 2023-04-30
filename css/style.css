@@ -1111,6 +1111,7 @@ h4 {
 footer {
     text-align: center;
     margin-top: 20px;
+    padding-bottom: 40px;
 }
 
 footer ul {
@@ -1170,34 +1171,84 @@ footer .bottom small {
     z-index: 999;
 }
 
-#loader.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: 2s ease-in;
+.lds-grid {
+    display: block;
+    position: relative;
 }
 
-#loader span {
-    width: 20px;
-    height: 20px;
-    background: #BAC3C9;
-    margin-right: 20px;
+.lds-grid div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
-    transition: all 0.3s ease-in-out;
-    animation: loader 2s infinite;
+    background: #fff;
+    animation: lds-grid 1.2s linear infinite;
 }
 
-
-#loader span:nth-child(2) {
-    animation-delay: 0.5s;
+.lds-grid div:nth-child(1) {
+    top: 8px;
+    left: 8px;
+    animation-delay: 0s;
 }
 
-#loader span:nth-child(3) {
-    animation-delay: 0.75s;
+.lds-grid div:nth-child(2) {
+    top: 8px;
+    left: 32px;
+    animation-delay: -0.4s;
 }
 
-#loader span:last-child {
-    margin-right: 0;
-    animation-delay: 1s;
+.lds-grid div:nth-child(3) {
+    top: 8px;
+    left: 56px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+    top: 32px;
+    left: 8px;
+    animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+    top: 32px;
+    left: 32px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+    top: 32px;
+    left: 56px;
+    animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+    top: 56px;
+    left: 8px;
+    animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+    top: 56px;
+    left: 32px;
+    animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+    top: 56px;
+    left: 56px;
+    animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
 }
 
 /* pre loader end */
@@ -1602,9 +1653,10 @@ footer .bottom small {
 
 
 @media all and (max-width: 480px) {
-    .main-text h1{
+    .main-text h1 {
         font-size: 26px;
     }
+
     .menu-active .menu {
         padding-bottom: 30px;
     }
@@ -1637,7 +1689,12 @@ footer .bottom small {
     }
 
     #services ul li span {
-        font-size: 16px;
+        font-size: 14px;
+    }
+
+    #services ul li .icon {
+        width: 25px;
+        height: 25px;
     }
 
     #services ul li {
@@ -1758,6 +1815,13 @@ footer .bottom small {
         height: 120px;
     }
 }
+
+@media all and (max-width: 400px) {
+    #services ul li {
+        width: 120px;
+    }
+}
+
 
 @media all and (max-width: 360px) {
     .update h1 {
@@ -1928,13 +1992,9 @@ footer .bottom small {
         width: 100%;
     }
 
-    img.img {
-        width: 2px;
-    }
-
-    .img1 {
-        width: 3px;
-        height: 200px;
+    #services ul li {
+        margin-right: 0;
+        width: 100%;
     }
 
     .contact-us h1 {
