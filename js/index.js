@@ -1,20 +1,4 @@
 $(document).ready(function () {
-  // header-sticky
-  window.onscroll = function () {
-    headerFunction();
-  };
-  var body = document.body;
-  var sticky = body.offsetTop;
-  var header = $("header");
-
-  function headerFunction() {
-    if (window.pageYOffset > 100) {
-      header.addClass("sticky");
-    } else {
-      header.removeClass("sticky");
-    }
-  }
-
   $("#navMenu").on("click", function () {
     $(".nav-menu").toggleClass("active");
     $("#navMenu").toggleClass("active");
@@ -24,8 +8,8 @@ $(document).ready(function () {
     $(".nav-menu .menu").removeClass("active");
   });
 });
+
 window.onload = function () {
-  //hide the preloader
   document.querySelector("#loader").style.display = "none";
 };
 
@@ -50,5 +34,3 @@ var swiper = new Swiper(".swiper", {
     el: ".swiper-pagination",
   },
 });
-
-AOS.init();
